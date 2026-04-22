@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "NusaCulta — Farmer Dashboard",
   description:
     "NusaCulta End-to-End Agri-Hub: IoT monitoring, AI Quality Grading, Dynamic Pricing, dan Alternative Credit Scoring untuk petani Indonesia.",
+  other: {
+    "dicoding:email": "azelpandy2@gmail.com",
+  },
 };
 
 export default function RootLayout({
