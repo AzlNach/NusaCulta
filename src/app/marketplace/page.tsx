@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import Navbar from "@/components/shared/Navbar";
+import DashboardLayout from "@/components/shared/DashboardLayout";
 import { mockData } from "@/lib/mock-data";
 
 const { marketplace_products } = mockData;
@@ -188,10 +188,8 @@ export default function MarketplacePage() {
     });
 
   return (
-    <div className="min-h-screen" style={{ background: "#F8F4EF" }}>
-      <Navbar activePage="marketplace" />
-
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <DashboardLayout>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
           <div>
@@ -351,11 +349,11 @@ export default function MarketplacePage() {
             )}
           </div>
         </div>
-      </main>
+      </div>
 
       {showCart && (
         <CartSidebar cart={cart} onClose={() => setShowCart(false)} onUpdate={updateCart} />
       )}
-    </div>
+    </DashboardLayout>
   );
 }
